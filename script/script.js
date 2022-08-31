@@ -1,4 +1,4 @@
-/*
+
 // funzione che crea un array nel quale ogni carattere è un elemento
 function reverseString(string) {
     // splitta la parola in un array
@@ -18,9 +18,9 @@ function reverseString(string) {
     }
 
 }
-// let userInput = prompt('Inserisci una parola ');
+let userInput = prompt('Inserisci una parola ');
 reverseString(userInput);
-*/
+
 // -----------------------------------------------------
 
 // chiedo gli input all'utente
