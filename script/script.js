@@ -23,15 +23,13 @@ reverseString(userInput);
 */
 // -----------------------------------------------------
 
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-// Sommiamo i due numeri
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-// Dichiariamo chi ha vinto.
-
 // chiedo gli input all'utente
-let oddOrEven = prompt('Pari o dispari?');
+let oddOrEven = prompt('pari o dispari?');
 let userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
+
+//log di prova
+console.log(`L'utente ha scelto ${oddOrEven}`);
+console.log(`L'utente ha scelto come numero ${userNumber}`);
 
 // funzione per numero random da 1 a 5
 function getRandomNumber(num1, num2) {
@@ -40,8 +38,31 @@ function getRandomNumber(num1, num2) {
     return computerNumber;
 }
 
+// funzione per determinare se un numero è pari o dispari
+function isEven(value) {
+    if (value % 2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 let sum = userNumber + getRandomNumber(1, 5);
-console.log(sum);
+console.log(`La somma dei due numeri è ${sum}`);
+
+// determino chi vince
+if (oddOrEven == 'pari' && isEven(sum)) {
+    console.log('L\'utente vince!');
+} else if (oddOrEven == 'pari' && !isEven(sum)) {
+    console.log('Il computer vince');
+} else if (oddOrEven == 'dispari' && !isEven(sum)) {
+    console.log('L\'utente vince!');
+} else {
+    console.log('Il computer vince');
+}
+
+
+
 
 
 
